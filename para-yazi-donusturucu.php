@@ -1,4 +1,8 @@
 <?php
+/*
+ * @var $number string
+ * eg: '1251254123.58'
+ */
 function bigNumberFormat($number)
 {
 	$exp = explode('.', $number);
@@ -19,7 +23,13 @@ function bigNumberFormat($number)
 
 	return $nint.'.'.$dec;
 }
-
+/*
+ * @var $price float
+ * @var $currency_symbol string
+ * @var $decimal_symbol string
+ * @var $prefix string
+ * @var $seperator string
+ */
 function priceToTextTR($price = 0, $currency_symbol = 'TÜRK LİRASI', $decimal_symbol = 'KURUŞ', $prefix = 'YALNIZ', $seperator = '#')
 {
 	$price = bigNumberFormat(strval($price));
