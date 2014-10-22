@@ -22,7 +22,7 @@ function bigNumberFormat($number)
 
 function priceToTextTR($price = 0, $currency_symbol = 'TÜRK LİRASI', $decimal_symbol = 'KURUŞ', $prefix = 'YALNIZ', $seperator = '#')
 {
-	$price = static::bigNumberFormat(strval($price));
+	$price = bigNumberFormat(strval($price));
 
 	$exp = explode('.', $price);
 
